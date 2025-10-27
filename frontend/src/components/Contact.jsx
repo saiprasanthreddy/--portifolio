@@ -6,6 +6,7 @@ import { Card } from './ui/card';
 import { personalInfo } from '../mock';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,7 +18,15 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+  const formRef = useRef(null);
   const { toast } = useToast();
+
+  // EmailJS Configuration
+  const EMAILJS_CONFIG = {
+    publicKey: '9RHmBrxGmTFeog-DH',        // Replace with your actual public key
+    serviceId: 'service_wq54sdo',          // Replace with your service ID
+    templateId: 'template_w06dlbt'     // Replace with your template ID
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -60,17 +69,57 @@ const Contact = () => {
       return;
     }
 
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
+        variant: "destructive"
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
-    // Mock email sending (will integrate EmailJS later)
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        EMAILJS_CONFIG.serviceId,
+        EMAILJS_CONFIG.templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject || 'New message from portfolio',
+          message: formData.message,
+          to_name: personalInfo.name,
+        },
+        EMAILJS_CONFIG.publicKey
+      );
+
+      console.log('Email sent successfully:', result);
+
+      // Success notification
       toast({
-        title: "Message Sent!",
+        title: "Message Sent! ✉️",
         description: "Thank you for reaching out. I'll get back to you soon!",
       });
+
+      // Reset form
       setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 2000);
+
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      
+      // Error notification
+      toast({
+        title: "Failed to Send",
+        description: "There was an error sending your message. Please try emailing directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -101,7 +150,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold mb-1">Email</h3>
-                  <a href={`mailto:${personalInfo.email}`} className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
+                  <a href={`mailto:${personalInfo.email}`} className="text-gray-400 hover:text-cyan-400 transition-colors text-sm break-all">
                     {personalInfo.email}
                   </a>
                 </div>
@@ -140,7 +189,7 @@ const Contact = () => {
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
           }`}>
             <Card className="bg-gray-900 border-2 border-cyan-400/20 p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-white font-semibold mb-2 text-sm">Name *</label>
@@ -210,7 +259,7 @@ const Contact = () => {
               </form>
 
               <p className="text-gray-500 text-xs mt-4 text-center">
-                Email integration ready (EmailJS placeholder). Messages will be sent to your inbox.
+                Your message will be sent directly to my inbox via EmailJS.
               </p>
             </Card>
           </div>

@@ -1,113 +1,146 @@
 // Mock data for portfolio - Replace with actual data later
 
 export const personalInfo = {
-  name: "Alex Morgan",
+  name: "T SAI PRASANTH REDDY",
   role: "AIML Student | Full Stack Developer",
   tagline: "Building Intelligent Applications with Data-Driven Insights",
   bio: "I'm a B.E. student specializing in Artificial Intelligence and Machine Learning, with a passion for full-stack development. I bridge the gap between cutting-edge AI research and production-ready web applications, creating intelligent systems that scale. My expertise spans from training neural networks to deploying them in cloud-native architectures.",
-  avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=AlexMorgan",
-  email: "alex.morgan@example.com",
-  phone: "+1 (555) 123-4567",
-  location: "San Francisco, CA",
+  avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Saiprasanth&backgroundColor=ffeb3b,ffc107,ff9800,ff5722,795548,607d8b,3f51b5,2196f3,03a9f4,00bcd4",
+  email: "saiprasanthq170@gmail.com",
+  phone: "+91 7207473733",
+  location: "Bengaluru, India",
   social: {
-    github: "https://github.com/alexmorgan",
-    linkedin: "https://linkedin.com/in/alexmorgan",
-    twitter: "https://twitter.com/alexmorgan"
+    github: "https://github.com/saiprasanthreddy",
+    linkedin: "https://www.linkedin.com/in/sai-prasanth153",
+    twitter: "https://twitter.com/saiprasanth"
   },
-  resumeUrl: "#resume-placeholder"
+  resumeUrl: "/1T Sai Prasanth Reddy Resu.pdf"
 };
 
 export const skills = {
   aiml: [
-    { name: "Python", level: 95 },
-    { name: "PyTorch", level: 90 },
-    { name: "TensorFlow", level: 85 },
-    { name: "scikit-learn", level: 92 },
-    { name: "NLP", level: 88 },
-    { name: "Computer Vision", level: 85 },
-    { name: "Pandas/NumPy", level: 93 },
-    { name: "Jupyter", level: 90 }
+    { name: "Python", level: 85 },
+    { name: "Pandas/NumPy", level: 90 },
+     { name: "Machine Learning", level: 55 },
+     { name: "Deep Learning", level: 50 },
+    { name: "NLP", level: 50 },
+    { name: "Generative AI", level: 55 },
+    { name: "OpenCV", level: 45 },
+    { name: "Jupyter/colab", level: 80 }
   ],
   fullstack: [
-    { name: "React.js", level: 93 },
-    { name: "Node.js", level: 90 },
-    { name: "Express.js", level: 88 },
+    { name: "React.js", level: 83 },
+    { name: "Node.js", level: 80 },
+    { name: "Express.js", level: 82 },
     { name: "MongoDB", level: 85 },
-    { name: "PostgreSQL", level: 82 },
-    { name: "REST APIs", level: 92 },
-    { name: "GraphQL", level: 80 },
+    { name: "MySQL", level: 75 },
+    { name: "Tailwind CSS", level: 70 },
+    { name: "JavaScript", level: 90 },
     { name: "TypeScript", level: 87 }
   ],
   devops: [
-    { name: "Docker", level: 85 },
-    { name: "AWS", level: 82 },
-    { name: "CI/CD", level: 80 },
-    { name: "Git", level: 93 },
-    { name: "Linux", level: 88 },
-    { name: "Kubernetes", level: 75 }
+     { name: "DevOps_processing..", level: 0 },
+     { name: "Git/GitHub", level: 85 },
+    { name: "VS Code", level: 90 },
+    { name: "Tableau", level: 75 },
+    { name: "Power BI", level: 72 },
+    { name: "MS Excel", level: 80 }
   ]
 };
 
 export const projects = [
   {
     id: 1,
-    title: "AI-Powered Chatbot Platform",
-    description: "Built an intelligent conversational AI using transformer models and deployed it as a scalable web application. Features include context-aware responses, sentiment analysis, and multi-language support.",
-    tech: ["Python", "PyTorch", "React", "Node.js", "MongoDB", "Docker"],
-    image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=600&fit=crop",
+    title: "Divya Mandir - Temple Management Platform",
+    description: "Full-stack temple web application for event publishing, rituals, schedules, and temple history with real-time updates and notifications. Integrated donations, contact modules and multilingual support to enhance temple-devotee interaction.",
+    tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS", "JWT", "Socket.io", "Razorpay API"],
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=600&fit=temple",
     demo: "#demo-placeholder",
-    github: "#github-placeholder",
-    category: "AIML"
+    github: "https://github.com/saiprasanthreddy/divya-mandir",
+    category: "Full Stack",
+    duration: "Dec 2024 – Jan 2025"
   },
   {
     id: 2,
-    title: "Real-Time Object Detection System",
-    description: "Developed a computer vision application for real-time object detection and tracking using YOLO architecture. Optimized for edge devices with model quantization and TensorFlow Lite.",
-    tech: ["TensorFlow", "OpenCV", "Flask", "WebRTC", "AWS"],
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=600&fit=crop",
+    title: "AI Web Scraping Using LLM",
+    description: "AI-driven web scraping solution leveraging Large Language Models to extract, understand, and summarize unstructured data. Implemented NLP and semantic search with LangChain and vector databases for context-aware data processing.",
+    tech: ["Python", "BeautifulSoup", "Selenium", "OpenAI", "Scrapy", "LangChain", "Vector DB"],
+    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&h=600&fit=crop",
     demo: "#demo-placeholder",
-    github: "#github-placeholder",
-    category: "AIML"
+    github: "https://github.com/saiprasanthreddy/ai-web-scraping",
+    category: "AIML",
+    duration: "Jan 2024 – Feb 2024"
   },
   {
-    id: 3,
-    title: "MERN Stack E-Commerce Platform",
-    description: "Full-featured e-commerce platform with payment integration, inventory management, and admin dashboard. Implemented with Redux for state management and JWT authentication.",
-    tech: ["MongoDB", "Express", "React", "Node.js", "Stripe", "Redis"],
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+      id: 3,
+    title: "AR Navigation For Visually Impaired",
+    description: "AI-powered Augmented Reality navigation system that detects obstacles and provides real-time audio guidance for visually impaired users. Integrated object recognition, GPS-based pathfinding, and text-to-speech for safe, efficient mobility.",
+    tech: ["Python", "OpenCV", "TensorFlow", "Google Maps API", "Text-to-Speech", "AR"],
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop",
     demo: "#demo-placeholder",
-    github: "#github-placeholder",
-    category: "Full Stack"
+    github: "https://github.com/saiprasanthreddy/ar-navigation",
+    category: "AIML",
+    date: "Aug 2025 – Sept 2025"
   },
   {
-    id: 4,
-    title: "Predictive Analytics Dashboard",
-    description: "Interactive data visualization dashboard for business intelligence. Integrated machine learning models for sales forecasting and customer churn prediction with real-time data processing.",
-    tech: ["Python", "scikit-learn", "React", "D3.js", "FastAPI", "PostgreSQL"],
+     id: 4,
+    title: "Crash Course Attendance Analytics",
+    description: "Analyzed 4,600+ sign-up records using Python and Pandas with end-to-end data cleaning pipeline. Engineered a Unique ID system to de-duplicate entries and resolve data integrity issues. Generated comprehensive 5-Day Attendance Reports with demographic insights.",
+    tech: ["Python", "Pandas", "Matplotlib", "Google Colab", "Data Analysis", "EDA"],
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
     demo: "#demo-placeholder",
-    github: "#github-placeholder",
-    category: "AIML + Full Stack"
+    github: "https://github.com/saiprasanthreddy/attendance-analytics",
+    category: "Data Analysis",
+    date: "Mar 2025"
   },
   {
-    id: 5,
-    title: "Social Media Analytics Tool",
-    description: "NLP-powered social media monitoring tool that performs sentiment analysis, trend detection, and influencer identification. Built with microservices architecture for scalability.",
-    tech: ["Python", "BERT", "React", "Kafka", "Docker", "MongoDB"],
+   id: 5,
+    title: "Portfolio Website",
+    description: "Modern, responsive portfolio website built with React.js and Tailwind CSS. Features include project showcase, skills visualization, contact form with EmailJS integration, and smooth animations. Demonstrates full-stack development capabilities.",
+    tech: ["React.js", "Tailwind CSS", "EmailJS", "Framer Motion", "Lucide Icons"],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    demo: "#demo-placeholder",
-    github: "#github-placeholder",
-    category: "AIML + Full Stack"
+    demo: "#",
+    github: "https://github.com/saiprasanthreddy/portfolio",
+    category: "Full Stack",
+  }
+];
+
+export const achievements = [
+  {
+    title: "JavaScript Certification",
+    organization: "KnowledgeGate",
+    year: "2024",
+    link: "https://knowledgegate.ai/learn/certificate/11714432-219977"
+  },
+  {
+    title: "React.js Certification",
+    organization: "KnowledgeGate",
+    year: "2024",
+    link: "https://learn.knowledgegate.al/learn/certificate/11714432-219978"
+  },
+  {
+    title: "Applied Generative AI Certification",
+    organization: "Infosys",
+    year: "2025",
+    link: "https://verify.onwingspan.com"
+  },
+  {
+    title: "Crash Course on Data Analysis with Python",
+    organization: "Innomatics Research Labs",
+    year: "2025",
+    link: "#" // If you don't have a link, use "#" or leave empty
   }
 ];
 
 export const resumeHighlights = [
-  "B.E. in Computer Science (AIML Specialization) - GPA: 3.8/4.0",
-  "Published research paper on Neural Architecture Search",
-  "3+ years of full-stack development experience",
-  "AWS Certified Solutions Architect Associate",
-  "Contributor to open-source ML projects",
-  "Winner of University Hackathon 2024"
+  "B.E. in AI & ML from Vemana Institute of Technology - CGPA: 7.6/10",
+  "Diploma in ECE from PVKK Polytechnic - 80% | 10th from UKRS - 97%",
+  "JavaScript & React.js Certified by KnowledgeGate 2024",
+  "Applied Generative AI Certification by Infosys 2025",
+  "Crash Course on Data Analysis with Python - Innomatics Research Labs",
+  "4+ Real-world projects in Full Stack Development and AI/ML",
+  "Strong expertise in MERN Stack and Modern Web Technologies",
+  "Experienced in LangChain, Vector Databases, and LLM Integration"
 ];
 
 // Mock sentiment analysis responses

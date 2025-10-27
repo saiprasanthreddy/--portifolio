@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start:backend": "cd backend && uvicorn server:app --host 0.0.0.0 --port 8001 --reload",
+    "start:frontend": "cd frontend && yarn start",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "dependencies": {
+    "mongodb": "^6.20.0"
+  }
+}

@@ -95,7 +95,7 @@ const Skills = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <SkillCategory title="AI/ML Stack" skillList={skills.aiml} delay={200} />
           <SkillCategory title="Full Stack" skillList={skills.fullstack} delay={400} />
-          <SkillCategory title="DevOps & Tools" skillList={skills.devops} delay={600} />
+          <SkillCategory title="Data Analysis & Tools & DevOps" skillList={skills.devops} delay={600} />
         </div>
 
         {/* Tech Badges */}
@@ -104,7 +104,7 @@ const Skills = () => {
         }`}>
           <p className="text-gray-400 mb-4 text-sm">Additional Technologies:</p>
           <div className="flex flex-wrap items-center justify-center gap-2">
-            {['FastAPI', 'Redux', 'WebSockets', 'Nginx', 'Redis', 'Kafka', 'OpenCV', 'Hugging Face', 'MLflow', 'Tableau'].map(tech => (
+            {['FastAPI', 'Redux', 'vibe_coding', 'basic_n8n', 'promt_engineering', 'data_analysis', 'Hugging Face', 'MLflow', 'Tableau'].map(tech => (
               <Badge
                 key={tech}
                 variant="outline"

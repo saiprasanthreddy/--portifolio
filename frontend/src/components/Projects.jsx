@@ -31,7 +31,7 @@ const Projects = () => {
     };
   }, []);
 
-  const categories = ['All', 'AIML', 'Full Stack', 'AIML + Full Stack'];
+  const categories = ['All', 'AIML', 'Full Stack', 'Data Analysis'];
   const filteredProjects = filter === 'All' 
     ? projects 
     : projects.filter(p => p.category === filter);

@@ -46,7 +46,7 @@ const Navbar = () => {
             onClick={(e) => scrollToSection(e, '#home')}
             className="text-xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
           >
-            &lt;AM /&gt;
+            &lt;$P /&gt;
           </a>
 
           {/* Desktop Navigation */}
